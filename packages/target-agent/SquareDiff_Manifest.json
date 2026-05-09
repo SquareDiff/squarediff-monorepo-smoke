@@ -1,0 +1,11 @@
+{
+  "agent_command": ["python", "src/agent.py"],
+  "agent_cwd": ".",
+  "requirements_file": "requirements.txt",
+  "python_version": "3.12",
+  "language": "python",
+  "setup_commands": [],
+  "input_mode": "stdin",
+  "output_mode": "stdout",
+  "env_vars_required": []
+}
