@@ -1,0 +1,8 @@
+{
+  "name": "@squarediff-smoke/node-agent",
+  "version": "0.1.0",
+  "type": "commonjs",
+  "dependencies": {
+    "@squarediff-smoke/node-shared": "file:../node-shared"
+  }
+}

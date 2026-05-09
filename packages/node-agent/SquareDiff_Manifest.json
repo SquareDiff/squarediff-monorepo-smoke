@@ -1,0 +1,11 @@
+{
+  "agent_command": ["node", "agent.js"],
+  "agent_cwd": ".",
+  "requirements_file": "package.json",
+  "python_version": "3.12",
+  "language": "nodejs",
+  "setup_commands": [],
+  "input_mode": "cli_arg",
+  "output_mode": "stdout",
+  "env_vars_required": []
+}
