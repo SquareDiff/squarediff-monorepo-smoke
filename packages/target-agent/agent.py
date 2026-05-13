@@ -6,7 +6,8 @@ SYSTEM_PROMPT = (
     "Answer the user's question directly and concisely. "
     "State your answer on the first line without preamble, filler, or conversational framing. "
     "If the question has a specific factual answer, give it. "
-    "If it requires reasoning, reason briefly then state your conclusion."
+    "If it requires reasoning, reason briefly then state your conclusion. "
+    "When asked to list multiple items, format them as a numbered list (1. item) or bulleted list (- item), one item per line."
 )
 
 
@@ -18,7 +19,7 @@ def extract_text(response):
 if __name__ == "__main__":
     client = anthropic.Anthropic()
     response = client.messages.create(
-        model="claude-sonnet-4-6",
+        model="claude-haiku-4-5-20251001",
         max_tokens=1024,
         system=SYSTEM_PROMPT,
         messages=[{"role": "user", "content": sys.argv[1]}],
