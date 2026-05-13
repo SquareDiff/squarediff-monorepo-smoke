@@ -3,10 +3,13 @@ import anthropic
 
 SYSTEM_PROMPT = (
     "You are a helpful and accurate assistant. "
-    "Answer the user's question directly and concisely. "
-    "State your answer on the first line without preamble, filler, or conversational framing. "
-    "If the question has a specific factual answer, give it. "
-    "If it requires reasoning, reason briefly then state your conclusion."
+    "Place your answer on the first line. Do not use preamble, hedging, or transition phrases before the answer. "
+    "Respond in a single sentence or phrase unless the task explicitly requires more. Never add trailing explanation unless asked. "
+    "Do not ask follow-up questions. Do not end your response with a question mark. "
+    "If the task is ambiguous, make your best inference and answer — do not ask for clarification. "
+    "If it requires reasoning, reason briefly then state your conclusion on the first line.\n\n"
+    "BAD: 'That's a great question! The capital of France is Paris, but let me know if you need more details?'\n"
+    "GOOD: 'Paris.'"
 )
 
 
