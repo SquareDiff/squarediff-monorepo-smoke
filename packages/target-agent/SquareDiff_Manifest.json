@@ -3,9 +3,7 @@
   "agent_cwd": ".",
   "requirements_file": "requirements.txt",
   "python_version": "3.12",
-  "language": "python",
-  "setup_commands": [],
   "input_mode": "cli_arg",
   "output_mode": "stdout",
-  "env_vars_required": []
+  "env_vars_required": ["ANTHROPIC_API_KEY"]
 }
