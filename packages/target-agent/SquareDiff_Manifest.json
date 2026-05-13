@@ -1,5 +1,5 @@
 {
-  "agent_command": ["python", "agent.py"],
+  "agent_command": ["python", "batch_agent.py"],
   "agent_cwd": ".",
   "requirements_file": "requirements.txt",
   "python_version": "3.12",
