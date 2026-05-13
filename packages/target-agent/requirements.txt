@@ -1,1 +1,3 @@
 anthropic
+opentelemetry-api
+opentelemetry-sdk

@@ -1,5 +1,14 @@
 import sys
 import anthropic
+import opentelemetry.trace as trace
+from opentelemetry.trace import ProxyTracerProvider
+from opentelemetry.sdk.trace import TracerProvider
+from opentelemetry.sdk.trace.export import BatchSpanProcessor, ConsoleSpanExporter
+
+if isinstance(trace.get_tracer_provider(), ProxyTracerProvider):
+    _provider = TracerProvider()
+    _provider.add_span_processor(BatchSpanProcessor(ConsoleSpanExporter()))
+    trace.set_tracer_provider(_provider)
 
 SYSTEM_PROMPT = (
     "You are a helpful and accurate assistant. "
