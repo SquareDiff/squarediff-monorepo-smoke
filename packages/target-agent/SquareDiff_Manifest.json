@@ -1,9 +1,9 @@
 {
-  "agent_command": ["python", "eval.py"],
+  "agent_command": ["python", "agent.py"],
   "agent_cwd": ".",
   "requirements_file": "requirements.txt",
   "python_version": "3.12",
   "env_vars_required": ["ANTHROPIC_API_KEY"],
-  "input_mode": "stdin",
+  "input_mode": "cli_arg",
   "output_mode": "stdout"
 }
