@@ -20,7 +20,8 @@ if __name__ == "__main__":
     response = client.messages.create(
         model="claude-sonnet-4-6",
         max_tokens=1024,
-        system=SYSTEM_PROMPT,
+        system=[{"type": "text", "text": SYSTEM_PROMPT, "cache_control": {"type": "ephemeral"}}],
         messages=[{"role": "user", "content": sys.argv[1]}],
+        temperature=0,
     )
     print(extract_text(response) or "I could not determine the answer.")
